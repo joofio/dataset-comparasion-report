@@ -32,7 +32,6 @@ This document is aimed for providing a technical overview of a synthetic/real da
 Not all columns of the original dataset will be assessed, since columns will be filtered by the synthetic columns, since synthesis mechanisms often reduce columns due to identifiers (not needed) and high null columns. \\
 This report aims to facilitate the assessment of sharing synthetic data with third parties.
 
-\subsection{ctgan}
 
 \section{Dataset Description}
 
@@ -640,7 +639,9 @@ For this purpose, we fixed a column for the attacker to known which was the age 
 The remaining fields used were:
 \begin{itemize}
  
-  \item tipo\_parto
+  \item IDADE\_MATERNA
+     
+  \item TIPO\_PARTO
      
   \item GS
      
@@ -650,11 +651,9 @@ The remaining fields used were:
      
   \item HIPERTENSAO\_PRE\_ECLAMPSIA
      
-  \item ESTUP
+  \item ESTUPEFACIENTES
      
   \item COVID\_19
-     
-  \item IDADE\_MATERNA
      
   \item PESO\_INICIAL
      
