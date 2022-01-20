@@ -1,0 +1,252 @@
+\documentclass{article}
+\input{packages}
+\input{acro}
+\graphicspath{ {./images/} }
+
+\begin{document}
+\input{title}
+
+\cleardoublepage
+
+% TOC %
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+\cleardoublepage
+\listoffigures
+\listoftables
+\cleardoublepage
+% This is a regular LaTeX comment
+\pagenumbering{arabic}
+\section{Introduction}
+
+
+With the growing technological advances, the quantity of healthcare related data produced around the world increased exponentially \cite{choi_generating_2017,henry_adoption_2016}.
+With this, the potential for harvesting this data also increases. The value locked within this data could help provide better healthcare with new information about diseases,
+drugs, and preventive therapies. It can also help create better health information systems, meaning an overall better clinical practice \cite{ISI:000502534100049}. But for this to happen, the data must reach the capable hands at the right time.
+But the release of clinical data has several barriers attached and rightly so. The leakage of patient’s privacy can break the confidence of the population in the healthcare professionals and institutions. Patient safety
+and privacy should be kept at all costs and compromise should be kept to minimal values. However, the current mechanisms for privacy maintenance are very long, bureaucratic and time consuming, nationally \cite{comissao_nacional_protecao_de_dados_principios_2015} and internationally \cite{office_for_civil_rights_guidance_2013}. The current scenario and general methods for privacy safeguards are related with pseudo-anonymization techniques.
+The removal of certain attributes, identifier modification, code grouping, or discretization are some of the methodologies. But not even these are totally safe \cite{el_emam_systematic_2011}.
+Synthetic data appear as an alternative for clinical data sharing, promising great data utility with minimal privacy concerns. Synthetic data is data that is generated automatically through programmatic processes. This is especially impactful for the case at hand since synthetic data has no explicit connection with the original data.\\
+This document is aimed for providing a technical overview of a synthetic/real dataset pair and evaluate the synthetically created dataset in terms of utility and privacy.
+Not all columns of the original dataset will be assessed, since columns will be filtered by the synthetic columns, since synthesis mechanisms often reduce columns due to identifiers (not needed) and high null columns. \\
+This report aims to facilitate the assessment of sharing synthetic data with third parties.
+
+\subsection(\VAR{method}}
+
+\section{Dataset Description}
+
+The final dataset have the variables showed in table \ref{tab:desc}.\\
+\VAR{col_list_df}
+\\
+
+The removed columns were:\\
+\begin{itemize}
+\BLOCK{for col in removed_cols} 
+  \item \VAR{col}
+    \BLOCK{endfor} 
+  \end{itemize}
+
+
+\subsection{Brief Variable Overview}
+The distribution of the variables is shown in table \ref{tab:realdatadesc}. The values are for numeric data only.\\
+\\
+\VAR{real_data_describe}
+\\
+\\
+\VAR{synth_data_describe}
+\\
+\\
+\subsection{Null Overview}
+
+Concerning null/empty cells for each column, the table \ref{tab:nullcomparasion} presents the comparison of the two datasets.\\
+
+\VAR{result_nulls}\\
+
+For the rest of the reports, when null are removed or imputed, it shall be indicated.
+\section{Utility evaluation}\\
+This section aims tom assess the quality of the synthetic dataset by assessing the similarities with the original one. The subsection \ref{sec:visual} will be concerned with only visual methods and the following subsection \ref{sec:quant} with numerical comparison.\\
+\subsection{Visual}  \label{sec:visual}
+This section is about visual methods for assessing the quality of the generated data.\\
+\subsubsection{Heatmaps}
+Heatmaps are concerning the correlations between all continuous variables. The more figure \ref{fig:heatmapreal} and figure \ref{fig:heatmapsynth} are alike, the more similar are the continuous variables relations between all columns. 
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=120mm]{heatmap_real}
+\caption{Heatmap for Real  Dataset}
+\label{fig:heatmapreal}
+\end{figure}
+\\
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=120mm]{heatmap_synth}
+\caption{Heatmap for Synthetic Dataset}
+\label{fig:heatmapsynth}
+\end{figure}
+
+\subsubsection{Plotting Categorical Variables}
+Categorical variables will be plotted as count bar plots.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{images/categorical_plot_0.png}
+\caption{Categorical Variable Plots 1}
+\label{fig:categorical1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{images/categorical_plot_1.png}
+\caption{Categorical Variable Plots 2}
+\label{fig:categorical2}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{images/categorical_plot_2.png}
+\caption{Categorical Variable Plots 3}
+\label{fig:categorical2}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{images/categorical_plot_3.png}
+\caption{Categorical Variable Plots 4}
+\label{fig:categorical3}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{images/categorical_plot_4.png}
+\caption{Categorical Variable Plots 5}
+\label{fig:categorical4}
+\end{figure}
+
+\subsubsection{Plotting Continuous Variables}
+Continuous variables will be plotted as density plots. See figure \ref{fig:continuous}.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth]{images/continuous_plot_0.png}
+\caption{Categorical Variable Plots}
+\label{fig:continuous}
+\end{figure}
+
+\subsubsection{Pairplot}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{pairplot}
+\caption{PairPlot}
+\label{fig:pairplot}
+\end{figure}
+  
+\subsection{Quantitative Evaluation}\label{sec:quant}
+This section hopes to bring more efficient methods of assessing the quality of a synthetic dataset. nowadays there are not unanimous metrics regarding this subject. For this reason, several different metrics are presented.\\
+Columnwise metrics will assess how similar the equivalent columns are. The tablewise metrics will try to measure how the datasets as a whole are similar.
+\subsubsection{Columnwise}
+  
+\paragraph{Kolmogorov–Smirnov test}
+In statistics, the \textit{Kolmogorov–Smirnov} (\acrshort{kstest}) test is a nonparametric test of the equality of continuous, one-dimensional probability distributions that can be used to compare a sample with a reference probability distribution (one-sample K–S test), or to compare two samples (two-sample K–S test). It is named after Andrey Kolmogorov and Nikolai Smirnov. 
+The two-sample K–S test is one of the most useful and general nonparametric methods for comparing two samples, as it is sensitive to differences in both location and shape of the empirical cumulative distribution functions of the two samples \cite{kstest_wiki}.  The results for the data are:\\
+
+\VAR{ks_test_df}
+
+
+\paragraph{Chi-squared test}
+This metric uses the chi-squared test to compare the distributions of the two categorical columns. It returns the resulting p-value so that a small value indicates that we can reject the null hypothesis (i.e. and suggests that the distributions are different). So higher p-value, chance of being similar is big, while small value indicates a small chance of being similar.\\
+
+\VAR{cs_test_df}
+
+
+\paragraph{Distance Metrics}
+In mathematical statistics, the \textbf{Kullback–Leibler divergence} ( \acrshort{kl}),  (also called relative entropy), is a measure of how one probability distribution is different from a second, reference probability distribution.\\
+In probability theory and statistics, the \textbf{Jensen–Shannon divergence} (\acrshort{jsd}) is a method of measuring the similarity between two probability distributions. It is also known as information radius (IRad) or total divergence to the average.It is based on the Kullback–Leibler divergence, with some notable (and useful) differences, including that it is symmetric and it always has a finite value. The square root of the Jensen–Shannon divergence is a metric often referred to as Jensen-Shannon distance.     
+In mathematics, the \textbf{Wasserstein distance} (\acrshort{wass}) or Kantorovich–Rubinstein metric is a distance function defined between probability distributions on a given metric space M.
+Intuitively, if each distribution is viewed as a unit amount of earth (soil) piled on M, the metric is the minimum "cost" of turning one pile into the other, which is assumed to be the amount of earth that needs to be moved times the mean distance it has to be moved. Because of this analogy, the metric is known in computer science as the earth mover's distance.
+The name "Wasserstein distance" was coined by R. L. Dobrushin in 1970, after the Russian mathematician Leonid Vaseršteĭn who introduced the concept in 1969. Most English-language publications use the German spelling "Wasserstein" (attributed to the name "Vaseršteĭn" being of German origin). The values of different distance metrics are present in the table \ref{tab:distance}.\\
+
+\caption{Distance Metrics Results Aggregated}\label{tab:distance}   
+\VAR{distance_agg}
+    
+
+\subsubsection{Tablewise}
+
+\paragraph{DiscreteKLDivergence}
+
+The value is \VAR{DiscKLD}.\\
+
+\paragraph{ContinuousKLDivergence}
+The value is \VAR{CKLD}.\\
+
+
+\paragraph{BNLikelihood}
+
+This metric fits a Bayesian Network to the real data and then evaluates the average likelihood of the rows from the synthetic data on it. 
+The value is \VAR{bnLike}.\\
+
+\paragraph{BNLogLikelihood}
+
+This metric fits a Bayesian Network to the real data and then evaluates the average log likelihood of the rows from the synthetic data on it.
+The value is \VAR{bnlogLike}.\\
+
+
+\paragraph{GMLogLikelihood}
+
+This metric fits multiple Gaussian Mixture models to the real data and then evaluates the average log likelihood of the synthetic data on them.
+The value is \VAR{HMloglh}.\\
+
+\paragraph{Coverage Support}
+Association rule mining [1,2] is one of the important data mining tasks that is nowadays applied to solve different kinds of problems in weak formalization fields. The main goal of association rule mining is to find all rules in datasets that satisfy some basic requirements, such as minimum support and minimum confidence. It was initially proposed by Agrawal [3] to solve the market basket problem in transactional datasets and now it has developed to solve many other problems, such as classification, clustering, etc. Classification and prediction are two important tasks of data mining that can be used to extract the hidden regularities from the given datasets to form accurate models (classifiers). Classification approaches aim to build classifiers (models) to predict the class label of a future data object. Such analysis can help to provide us with a better understanding of the data comprehensively. Classification methods have been widely used in many real-world applications, such as customer relationship management [4], medical diagnosis [5] and industrial design [6].
+
+\paragraph{Cross-validation}
+For this evaluation, we will make cross-validation with several machine-learning algorithms.
+The data will be trained on synthetic and then test on real and synthetic. This will help assess how plausible it is to deliver the synthetic data for data analysis. If the test values are similar, the synthetic dataset may be used as a proxy of the real.\\
+On the other hand, training on real and testing on real and synthetic will help assess how the synthetic dataset correctly created the relationships between all variables.
+For this purpose, there are 3 evaluation metrics, real on real, synthetic on synthetic and cross evaluation. Training with real and testing on synthetic and the other way around. For integer columns, mean absolute error was used, for categorical f1 (macro) was used (multiclass classification).\\
+
+\VAR{same_dataset_score}
+
+
+\VAR{dif_dataset_score}
+
+
+\section{Privacy evaluation}
+This section aims to assess how a synthetic dataset provides protection regarding privacy breaks. It will be assessed how secure the dataset that was synthesized is.
+\subsection{standalone metrics}
+\textbf{duplicates}\\
+
+Both datasets were merged and duplicates were tested. The value found as a result of this assessment is \VAR{duplicates}.\\
+Then a new assessment was found for every columns but one. The result for number of duplicates of $N-1$ columns is \VAR{duplicatesminus1}. 
+
+\subsection{Membership Inference attacks}
+For this purpose, we fixed a column for the attacker to known which was the age [IDADE\_MATERNA].
+The remaining fields used were:
+\begin{itemize}
+\BLOCK{for col in feature_list} 
+  \item \VAR{col}
+    \BLOCK{endfor} 
+  \end{itemize}
+\\
+With this, we have a total of \VAR{inference_attack} equal results between datasets.
+
+\subsection{distance metrics}
+
+For this, we calculated the euclidian distance between records.
+
+For the cosine distance between samples in Real Dataset and synthetic dataset, the value is \VAR{cosine_distance}.
+
+
+
+\section{Conclusion and final remarks}
+
+...
+
+% Biblio
+\cleardoublepage
+\printglossary[type=\acronymtype]
+\cleardoublepage
+\bibliographystyle{abbrv}
+\bibliography{evaluationbiblio}
+\end{document}
