@@ -39,7 +39,7 @@ The final dataset have the variables showed in table \ref{tab:desc}.\\
 \begin{longtable}{lll}
 \caption{Dataset Variables Description}\label{tab:desc}\\
 \toprule
-                       Columns &   dtypes &         Type \\
+  Columns &   dtypes &         Type \\
 \midrule
 \endhead
 \midrule
@@ -49,57 +49,20 @@ The final dataset have the variables showed in table \ref{tab:desc}.\\
 
 \bottomrule
 \endlastfoot
-                 IDADE\_MATERNA &  float64 &   Continuous \\
-                            GS &   object &  Categorical \\
-                  PESO\_INICIAL &  float64 &   Continuous \\
-                           IMC &  float64 &   Continuous \\
-                      CIGARROS &   object &  Categorical \\
-                        ALCOOL &   object &  Categorical \\
-               ESTUPEFACIENTES &   object &  Categorical \\
-                        A\_PARA &  float64 &  Categorical \\
-                       A\_GESTA &  float64 &  Categorical \\
-             EUTOCITO\_ANTERIOR &  float64 &  Categorical \\
-             VENTOSAS\_ANTERIOR &  float64 &  Categorical \\
-              FORCEPS\_ANTERIOR &  float64 &  Categorical \\
-           CESARIANAS\_ANTERIOR &  float64 &  Categorical \\
-                 TIPO\_GRAVIDEZ &   object &  Categorical \\
-                       VIGIADA &   object &  Categorical \\
-    NUMERO\_CONSULTAS\_PRE\_NATAL &  float64 &   Continuous \\
-              VIGIADA\_HOSPITAL &   object &  Categorical \\
-          VIGIADA\_CENTRO\_SAUDE &   object &  Categorical \\
-        VIGIADA\_NESTE\_HOSPITAL &   object &  Categorical \\
-                 G\_TERAPEUTICA &   object &  Categorical \\
-                        NUM\_RN &  float64 &  Categorical \\
-                         BACIA &   object &  Categorical \\
-         APRESENTACAO\_ADMISSAO &   object &  Categorical \\
-                  BISHOP\_SCORE &  float64 &  Categorical \\
-    IDADE\_GESTACIONAL\_ADMISSAO &  float64 &   Continuous \\
- TRAB\_PARTO\_ENTRADA\_ESPONTANEO &   object &  Categorical \\
-   TRAB\_PARTO\_ENTRADA\_INDUZIDO &   object &  Categorical \\
-                           RPM &   object &  Categorical \\
-           HIPERTENSAO\_CRONICA &   object &  Categorical \\
-       HIPERTENSAO\_GESTACIONAL &   object &  Categorical \\
-     HIPERTENSAO\_PRE\_ECLAMPSIA &   object &  Categorical \\
-          DIABETES\_GESTACIONAL &   object &  Categorical \\
-    DIABETES\_GESTACIONAL\_DIETA &   object &  Categorical \\
- DIABETES\_GESTACIONAL\_INSULINA &   object &  Categorical \\
-  DIABETES\_GESTACIONAL\_ANTIBIO &   object &  Categorical \\
-              DIABETES\_MATERNA &   object &  Categorical \\
-                DIABETES\_TIPO1 &   object &  Categorical \\
-                DIABETES\_TIPO2 &   object &  Categorical \\
-                  HEMATOLOGICA &   object &  Categorical \\
-                  RESPIRATORIA &   object &  Categorical \\
-                      CEREBRAL &   object &  Categorical \\
-                      CARDIACA &   object &  Categorical \\
-                    TIPO\_PARTO &   object &  Categorical \\
-         APRESENTACAO\_NO\_PARTO &   object &  Categorical \\
-           TRAB\_PARTO\_NO\_PARTO &   object &  Categorical \\
-        SEMANAS\_GESTACAO\_PARTO &  float64 &   Continuous \\
-                  GRUPO\_ROBSON &   object &  Categorical \\
-                DATA\_PARTO\_mes &  float64 &  Categorical \\
-                DATA\_PARTO\_ano &  float64 &  Categorical \\
-                      COVID\_19 &   object &  Categorical \\
-              RETESTE\_NEGATIVO &   object &  Categorical \\
+      Age &  float64 &   Continuous \\
+      sex &   object &  Categorical \\
+       cp &   object &  Categorical \\
+ trestbps &  float64 &   Continuous \\
+     chol &  float64 &   Continuous \\
+      fbs &   object &  Categorical \\
+  restecg &   object &  Categorical \\
+  thalach &  float64 &   Continuous \\
+    exang &   object &  Categorical \\
+  oldpeak &  float64 &   Continuous \\
+    slope &   object &  Categorical \\
+       ca &   object &  Categorical \\
+     thal &   object &  Categorical \\
+      num &   object &  Categorical \\
 \end{longtable}
 
 \\
@@ -116,7 +79,7 @@ The distribution of the variables is shown in table \ref{tab:realdatadesc}. The 
 \begin{longtable}{lrrrrr}
 \caption{Original Data Description}\label{Realdatadesc}\\
 \toprule
-{} &   mean &  std &    25\% &    50\% &    75\% \\
+{} &  mean &  std &   25\% &   50\% &   75\% \\
 \midrule
 \endhead
 \midrule
@@ -126,22 +89,11 @@ The distribution of the variables is shown in table \ref{tab:realdatadesc}. The 
 
 \bottomrule
 \endlastfoot
-IDADE\_MATERNA              &   30.6 &  5.7 &   27.0 &   31.0 &   35.0 \\
-PESO\_INICIAL               &   65.6 & 13.3 &   56.0 &   63.0 &   73.0 \\
-IMC                        &   25.0 &  6.2 &   21.5 &   23.9 &   27.3 \\
-A\_PARA                     &    0.7 &  0.8 &    0.0 &    1.0 &    1.0 \\
-A\_GESTA                    &    1.4 &  1.5 &    0.0 &    2.0 &    2.0 \\
-EUTOCITO\_ANTERIOR          &    0.4 &  0.7 &    0.0 &    0.0 &    1.0 \\
-VENTOSAS\_ANTERIOR          &    0.1 &  0.2 &    0.0 &    0.0 &    0.0 \\
-FORCEPS\_ANTERIOR           &    0.0 &  0.1 &    0.0 &    0.0 &    0.0 \\
-CESARIANAS\_ANTERIOR        &    0.2 &  0.4 &    0.0 &    0.0 &    0.0 \\
-NUMERO\_CONSULTAS\_PRE\_NATAL &    6.3 &  5.4 &    2.0 &    4.0 &    9.0 \\
-NUM\_RN                     &    1.0 &  0.1 &    1.0 &    1.0 &    1.0 \\
-BISHOP\_SCORE               &    4.9 &  3.1 &    3.0 &    4.0 &    7.0 \\
-IDADE\_GESTACIONAL\_ADMISSAO &   38.9 &  1.9 &   38.4 &   39.3 &   40.1 \\
-SEMANAS\_GESTACAO\_PARTO     &  273.9 & 12.6 &  270.0 &  276.0 &  281.0 \\
-DATA\_PARTO\_mes             &    6.7 &  3.3 &    4.0 &    7.0 &   10.0 \\
-DATA\_PARTO\_ano             & 2017.8 &  1.5 & 2017.0 & 2018.0 & 2019.0 \\
+Age      &  54.4 &  9.0 &  48.0 &  56.0 &  61.0 \\
+trestbps & 131.7 & 17.6 & 120.0 & 130.0 & 140.0 \\
+chol     & 246.7 & 51.8 & 211.0 & 241.0 & 275.0 \\
+thalach  & 149.6 & 22.9 & 133.5 & 153.0 & 166.0 \\
+oldpeak  &   1.0 &  1.2 &   0.0 &   0.8 &   1.6 \\
 \end{longtable}
 
 \\
@@ -149,7 +101,7 @@ DATA\_PARTO\_ano             & 2017.8 &  1.5 & 2017.0 & 2018.0 & 2019.0 \\
 \begin{longtable}{lrrrrr}
 \caption{Synthetic Data Description}\label{Synth data desc}\\
 \toprule
-{} &   mean &  std &    25\% &    50\% &    75\% \\
+{} &  mean &  std &   25\% &   50\% &   75\% \\
 \midrule
 \endhead
 \midrule
@@ -159,22 +111,11 @@ DATA\_PARTO\_ano             & 2017.8 &  1.5 & 2017.0 & 2018.0 & 2019.0 \\
 
 \bottomrule
 \endlastfoot
-IDADE\_MATERNA              &   33.9 &  6.1 &   30.0 &   32.0 &   40.0 \\
-PESO\_INICIAL               &   60.7 &  8.1 &   57.0 &   62.0 &   64.0 \\
-IMC                        &   22.4 &  2.8 &   20.5 &   23.4 &   23.6 \\
-A\_PARA                     &    1.0 &  1.0 &    1.0 &    1.0 &    1.0 \\
-A\_GESTA                    &    1.5 &  1.7 &    0.0 &    1.0 &    3.0 \\
-EUTOCITO\_ANTERIOR          &    0.4 &  0.9 &    0.0 &    0.0 &    0.0 \\
-VENTOSAS\_ANTERIOR          &    0.1 &  0.3 &    0.0 &    0.0 &    0.0 \\
-FORCEPS\_ANTERIOR           &    0.0 &  0.1 &    0.0 &    0.0 &    0.0 \\
-CESARIANAS\_ANTERIOR        &    0.2 &  0.5 &    0.0 &    0.0 &    0.0 \\
-NUMERO\_CONSULTAS\_PRE\_NATAL &   10.2 &  7.8 &    4.0 &    8.0 &   17.0 \\
-NUM\_RN                     &    1.0 &  0.2 &    1.0 &    1.0 &    1.0 \\
-BISHOP\_SCORE               &    4.2 &  1.6 &    4.0 &    4.0 &    4.0 \\
-IDADE\_GESTACIONAL\_ADMISSAO &   38.9 &  1.4 &   38.5 &   39.3 &   39.5 \\
-SEMANAS\_GESTACAO\_PARTO     &  267.2 & 18.9 &  267.0 &  270.0 &  278.0 \\
-DATA\_PARTO\_mes             &    6.8 &  3.3 &    4.0 &    7.0 &   10.0 \\
-DATA\_PARTO\_ano             & 2018.1 &  1.6 & 2017.0 & 2018.0 & 2020.0 \\
+Age      &  54.1 &  9.0 &  47.0 &  55.0 &  60.0 \\
+trestbps & 131.8 & 17.0 & 120.0 & 130.0 & 140.0 \\
+chol     & 246.4 & 47.8 & 212.0 & 243.0 & 274.5 \\
+thalach  & 149.6 & 25.3 & 137.5 & 156.0 & 168.0 \\
+oldpeak  &   1.1 &  1.2 &   0.0 &   0.9 &   1.6 \\
 \end{longtable}
 
 \\
@@ -186,7 +127,7 @@ Concerning null/empty cells for each column, the table \ref{tab:nullcomparasion}
 \begin{longtable}{lrr}
 \caption{Null values Comparison}\label{tab:nullcomparison}\\
 \toprule
-                        Column &    Real & Synthetic \\
+   Column & Real & Synthetic \\
 \midrule
 \endhead
 \midrule
@@ -196,57 +137,20 @@ Concerning null/empty cells for each column, the table \ref{tab:nullcomparasion}
 
 \bottomrule
 \endlastfoot
-                 IDADE\_MATERNA &       0 &         0 \\
-                            GS &    19.0 &      38.0 \\
-                  PESO\_INICIAL &  1226.0 &         0 \\
-                           IMC &  1571.0 &         0 \\
-                      CIGARROS &       0 &         0 \\
-                        ALCOOL &       0 &         0 \\
-               ESTUPEFACIENTES &       0 &         0 \\
-                        A\_PARA &   667.0 &         0 \\
-                       A\_GESTA &       0 &         0 \\
-             EUTOCITO\_ANTERIOR &       0 &         0 \\
-             VENTOSAS\_ANTERIOR &       0 &         0 \\
-              FORCEPS\_ANTERIOR &       0 &         0 \\
-           CESARIANAS\_ANTERIOR &       0 &         0 \\
-                 TIPO\_GRAVIDEZ &   698.0 &    1171.0 \\
-                       VIGIADA &     4.0 &      40.0 \\
-    NUMERO\_CONSULTAS\_PRE\_NATAL &  1714.0 &         0 \\
-              VIGIADA\_HOSPITAL &  1885.0 &    3428.0 \\
-          VIGIADA\_CENTRO\_SAUDE &  3624.0 &    2435.0 \\
-        VIGIADA\_NESTE\_HOSPITAL &  1964.0 &     987.0 \\
-                 G\_TERAPEUTICA &  1555.0 &    1179.0 \\
-                        NUM\_RN &       0 &         0 \\
-                         BACIA &  5932.0 &    6574.0 \\
-         APRESENTACAO\_ADMISSAO &       0 &         0 \\
-                  BISHOP\_SCORE &  6129.0 &         0 \\
-    IDADE\_GESTACIONAL\_ADMISSAO &    42.0 &         0 \\
- TRAB\_PARTO\_ENTRADA\_ESPONTANEO &       0 &         0 \\
-   TRAB\_PARTO\_ENTRADA\_INDUZIDO &       0 &         0 \\
-                           RPM &       0 &         0 \\
-           HIPERTENSAO\_CRONICA &       0 &         0 \\
-       HIPERTENSAO\_GESTACIONAL &       0 &         0 \\
-     HIPERTENSAO\_PRE\_ECLAMPSIA &       0 &         0 \\
-          DIABETES\_GESTACIONAL &       0 &         0 \\
-    DIABETES\_GESTACIONAL\_DIETA &       0 &         0 \\
- DIABETES\_GESTACIONAL\_INSULINA &       0 &         0 \\
-  DIABETES\_GESTACIONAL\_ANTIBIO &       0 &         0 \\
-              DIABETES\_MATERNA &       0 &         0 \\
-                DIABETES\_TIPO1 &       0 &         0 \\
-                DIABETES\_TIPO2 &       0 &         0 \\
-                  HEMATOLOGICA &       0 &         0 \\
-                  RESPIRATORIA &       0 &         0 \\
-                      CEREBRAL &       0 &         0 \\
-                      CARDIACA &       0 &         0 \\
-                    TIPO\_PARTO &       0 &         0 \\
-         APRESENTACAO\_NO\_PARTO &       0 &         0 \\
-           TRAB\_PARTO\_NO\_PARTO &       0 &         0 \\
-        SEMANAS\_GESTACAO\_PARTO &    10.0 &         0 \\
-                  GRUPO\_ROBSON &       0 &         0 \\
-                DATA\_PARTO\_mes &       0 &         0 \\
-                DATA\_PARTO\_ano &       0 &         0 \\
-                      COVID\_19 &   935.0 &    1556.0 \\
-              RETESTE\_NEGATIVO &  1278.0 &    1042.0 \\
+      Age &    0 &         0 \\
+      sex &    0 &         0 \\
+       cp &    0 &         0 \\
+ trestbps &    0 &         0 \\
+     chol &    0 &         0 \\
+      fbs &    0 &         0 \\
+  restecg &    0 &         0 \\
+  thalach &    0 &         0 \\
+    exang &    0 &         0 \\
+  oldpeak &    0 &         0 \\
+    slope &    0 &         0 \\
+       ca &  4.0 &       5.0 \\
+     thal &  2.0 &         0 \\
+      num &    0 &         0 \\
 \end{longtable}
 \\
 
@@ -351,12 +255,11 @@ The two-sample K–S test is one of the most useful and general nonparametric me
 
 \bottomrule
 \endlastfoot
-IMC                        &  0.75 \\
-IDADE\_MATERNA              &  0.77 \\
-PESO\_INICIAL               &  0.81 \\
-SEMANAS\_GESTACAO\_PARTO     &  0.66 \\
-IDADE\_GESTACIONAL\_ADMISSAO &  0.80 \\
-NUMERO\_CONSULTAS\_PRE\_NATAL &  0.69 \\
+Age      &  0.97 \\
+trestbps &  0.95 \\
+chol     &  0.98 \\
+thalach  &  0.95 \\
+oldpeak  &  0.93 \\
 \end{longtable}
 
 
@@ -377,51 +280,15 @@ This metric uses the chi-squared test to compare the distributions of the two ca
 
 \bottomrule
 \endlastfoot
-ALCOOL                        &  0.89 \\
-APRESENTACAO\_ADMISSAO         &  1.00 \\
-APRESENTACAO\_NO\_PARTO         &  0.99 \\
-A\_GESTA                       &  1.00 \\
-A\_PARA                        &  1.00 \\
-BACIA                         &  0.99 \\
-BISHOP\_SCORE                  &  1.00 \\
-CARDIACA                      &  0.96 \\
-CEREBRAL                      &  0.97 \\
-CESARIANAS\_ANTERIOR           &  1.00 \\
-CIGARROS                      &  0.91 \\
-COVID\_19                      &  0.94 \\
-DATA\_PARTO\_ano                &  1.00 \\
-DATA\_PARTO\_mes                &  1.00 \\
-DIABETES\_GESTACIONAL          &  0.85 \\
-DIABETES\_GESTACIONAL\_ANTIBIO  &  0.94 \\
-DIABETES\_GESTACIONAL\_DIETA    &  0.89 \\
-DIABETES\_GESTACIONAL\_INSULINA &  0.93 \\
-DIABETES\_MATERNA              &  0.82 \\
-DIABETES\_TIPO1                &  0.71 \\
-DIABETES\_TIPO2                &  0.73 \\
-ESTUPEFACIENTES               &  0.75 \\
-EUTOCITO\_ANTERIOR             &  1.00 \\
-FORCEPS\_ANTERIOR              &  0.95 \\
-GRUPO\_ROBSON                  &  1.00 \\
-GS                            &  1.00 \\
-G\_TERAPEUTICA                 &  1.00 \\
-HEMATOLOGICA                  &  0.96 \\
-HIPERTENSAO\_CRONICA           &  0.85 \\
-HIPERTENSAO\_GESTACIONAL       &  0.99 \\
-HIPERTENSAO\_PRE\_ECLAMPSIA     &  0.94 \\
-NUM\_RN                        &  0.98 \\
-RESPIRATORIA                  &  0.90 \\
-RETESTE\_NEGATIVO              &  0.98 \\
-RPM                           &  0.87 \\
-TIPO\_GRAVIDEZ                 &  1.00 \\
-TIPO\_PARTO                    &  1.00 \\
-TRAB\_PARTO\_ENTRADA\_ESPONTANEO &  0.93 \\
-TRAB\_PARTO\_ENTRADA\_INDUZIDO   &  0.78 \\
-TRAB\_PARTO\_NO\_PARTO           &  0.95 \\
-VENTOSAS\_ANTERIOR             &  0.99 \\
-VIGIADA                       &  1.00 \\
-VIGIADA\_CENTRO\_SAUDE          &  0.76 \\
-VIGIADA\_HOSPITAL              &  0.64 \\
-VIGIADA\_NESTE\_HOSPITAL        &  0.77 \\
+ca      &  0.00 \\
+cp      &  1.00 \\
+exang   &  0.96 \\
+fbs     &  0.92 \\
+num     &  1.00 \\
+restecg &  1.00 \\
+sex     &  0.97 \\
+slope   &  0.99 \\
+thal    &  1.00 \\
 \end{longtable}
 
 
@@ -447,10 +314,10 @@ The name "Wasserstein distance" was coined by R. L. Dobrushin in 1970, after the
 
 \bottomrule
 \endlastfoot
-KL      & -0.1349 &   0.0628 & 2.0816 & 0.3131 \\
-JSD     &  0.0000 &   0.0780 & 0.5851 & 0.1074 \\
-Wass    &  0.0002 &   0.0347 & 0.1993 & 0.0397 \\
-Entropy &  0.0000 &   0.0980 & 2.6668 & 0.4156 \\
+KL      & -0.0046 &   0.0040 & 0.0126 & 0.0051 \\
+JSD     &  0.0023 &   0.0289 & 0.0564 & 0.0166 \\
+Wass    &  0.0022 &   0.0201 & 0.0363 & 0.0114 \\
+Entropy &  0.0000 &   0.0043 & 0.0126 & 0.0040 \\
 \end{longtable}
 
     
@@ -459,27 +326,27 @@ Entropy &  0.0000 &   0.0980 & 2.6668 & 0.4156 \\
 
 \paragraph{DiscreteKLDivergence}
 
-The value is 0.57.\\
+The value is 0.754.\\
 
 \paragraph{ContinuousKLDivergence}
-The value is 0.658.\\
+The value is 0.701.\\
 
 
 \paragraph{BNLikelihood}
 
 This metric fits a Bayesian Network to the real data and then evaluates the average likelihood of the rows from the synthetic data on it. 
-The value is 3.2947144407064006e-11.\\
+The value is 0.0024167528547249175.\\
 
 \paragraph{BNLogLikelihood}
 
 This metric fits a Bayesian Network to the real data and then evaluates the average log likelihood of the rows from the synthetic data on it.
-The value is -18.753750698450673.\\
+The value is -7.464182894178309.\\
 
 
 \paragraph{GMLogLikelihood}
 
 This metric fits multiple Gaussian Mixture models to the real data and then evaluates the average log likelihood of the synthetic data on them.
-The value is -24.635189983083592.\\
+The value is 161.92497904486794.\\
 
 \paragraph{Coverage Support}
 Association rule mining [1,2] is one of the important data mining tasks that is nowadays applied to solve different kinds of problems in weak formalization fields. The main goal of association rule mining is to find all rules in datasets that satisfy some basic requirements, such as minimum support and minimum confidence. It was initially proposed by Agrawal [3] to solve the market basket problem in transactional datasets and now it has developed to solve many other problems, such as classification, clustering, etc. Classification and prediction are two important tasks of data mining that can be used to extract the hidden regularities from the given datasets to form accurate models (classifiers). Classification approaches aim to build classifiers (models) to predict the class label of a future data object. Such analysis can help to provide us with a better understanding of the data comprehensively. Classification methods have been widely used in many real-world applications, such as customer relationship management [4], medical diagnosis [5] and industrial design [6].
@@ -490,70 +357,33 @@ The data will be trained on synthetic and then test on real and synthetic. This 
 On the other hand, training on real and testing on real and synthetic will help assess how the synthetic dataset correctly created the relationships between all variables.
 For this purpose, there are 3 evaluation metrics, real on real, synthetic on synthetic and cross evaluation. Training with real and testing on synthetic and the other way around. For integer columns, mean absolute error was used, for categorical f1 (macro) was used (multiclass classification).\\
 
-\begin{longtable}{lr}
+\begin{longtable}{lrrr}
 \caption{Same Dataset score}\label{tab:samedatascore}\\
 \toprule
-{} &     0 \\
+{} &  Real &  Synthetic &  Ratio \\
 \midrule
 \endhead
 \midrule
-\multicolumn{2}{r}{{Continued on next page}} \\
+\multicolumn{4}{r}{{Continued on next page}} \\
 \midrule
 \endfoot
 
 \bottomrule
 \endlastfoot
-IDADE\_MATERNA                 &  0.76 \\
-GS                            &  1.00 \\
-PESO\_INICIAL                  &  0.82 \\
-IMC                           &  0.63 \\
-CIGARROS                      &  0.99 \\
-ALCOOL                        &  0.95 \\
-ESTUPEFACIENTES               &  0.96 \\
-A\_PARA                        &  5.72 \\
-A\_GESTA                       &  3.93 \\
-EUTOCITO\_ANTERIOR             &  5.00 \\
-VENTOSAS\_ANTERIOR             &  1.90 \\
-FORCEPS\_ANTERIOR              &  1.50 \\
-CESARIANAS\_ANTERIOR           &  4.23 \\
-TIPO\_GRAVIDEZ                 &  1.15 \\
-VIGIADA                       &  2.09 \\
-NUMERO\_CONSULTAS\_PRE\_NATAL    &  0.45 \\
-VIGIADA\_HOSPITAL              &  1.95 \\
-VIGIADA\_CENTRO\_SAUDE          &  1.16 \\
-VIGIADA\_NESTE\_HOSPITAL        &  1.88 \\
-G\_TERAPEUTICA                 &  0.43 \\
-NUM\_RN                        &  2.42 \\
-BACIA                         &  1.18 \\
-APRESENTACAO\_ADMISSAO         &  1.30 \\
-BISHOP\_SCORE                  &  1.96 \\
-IDADE\_GESTACIONAL\_ADMISSAO    &  0.17 \\
-TRAB\_PARTO\_ENTRADA\_ESPONTANEO &  1.25 \\
-TRAB\_PARTO\_ENTRADA\_INDUZIDO   &  1.32 \\
-RPM                           &  1.04 \\
-HIPERTENSAO\_CRONICA           &  1.54 \\
-HIPERTENSAO\_GESTACIONAL       &  1.29 \\
-HIPERTENSAO\_PRE\_ECLAMPSIA     &  1.40 \\
-DIABETES\_GESTACIONAL          &  1.83 \\
-DIABETES\_GESTACIONAL\_DIETA    &  1.70 \\
-DIABETES\_GESTACIONAL\_INSULINA &  1.59 \\
-DIABETES\_GESTACIONAL\_ANTIBIO  &  1.62 \\
-DIABETES\_MATERNA              &  1.58 \\
-DIABETES\_TIPO1                &  1.69 \\
-DIABETES\_TIPO2                &  1.30 \\
-HEMATOLOGICA                  &  0.98 \\
-RESPIRATORIA                  &  0.95 \\
-CEREBRAL                      &  1.02 \\
-CARDIACA                      &  1.57 \\
-TIPO\_PARTO                    &  1.99 \\
-APRESENTACAO\_NO\_PARTO         &  3.37 \\
-TRAB\_PARTO\_NO\_PARTO           &  2.36 \\
-SEMANAS\_GESTACAO\_PARTO        &  0.09 \\
-GRUPO\_ROBSON                  & 10.87 \\
-DATA\_PARTO\_mes                &  1.47 \\
-DATA\_PARTO\_ano                &  2.52 \\
-COVID\_19                      &  2.87 \\
-RETESTE\_NEGATIVO              &  2.74 \\
+Age      &  0.23 &       0.08 &   2.81 \\
+sex      &  0.58 &       0.63 &   0.93 \\
+cp       &  0.37 &       0.40 &   0.92 \\
+trestbps &  0.05 &      -0.00 & -26.13 \\
+chol     &  0.04 &      -0.11 &  -0.38 \\
+fbs      &  0.49 &       0.53 &   0.93 \\
+restecg  &  0.41 &       0.43 &   0.96 \\
+thalach  &  0.31 &       0.36 &   0.85 \\
+exang    &  0.63 &       0.64 &   0.98 \\
+oldpeak  &  0.36 &       0.38 &   0.92 \\
+slope    &  0.47 &       0.58 &   0.80 \\
+ca       &  0.26 &       0.24 &   1.05 \\
+thal     &  0.37 &       0.45 &   0.81 \\
+num      &  0.25 &       0.32 &   0.77 \\
 \end{longtable}
 
 
@@ -571,57 +401,20 @@ RETESTE\_NEGATIVO              &  2.74 \\
 
 \bottomrule
 \endlastfoot
-IDADE\_MATERNA                 &           -4.65 &           -5.32 \\
-GS                            &            0.11 &            0.10 \\
-PESO\_INICIAL                  &           -8.85 &           -5.70 \\
-IMC                           &           -3.21 &           -2.18 \\
-CIGARROS                      &            0.48 &            0.52 \\
-ALCOOL                        &            0.51 &            0.50 \\
-ESTUPEFACIENTES               &            0.55 &            0.51 \\
-A\_PARA                        &            0.13 &            0.11 \\
-A\_GESTA                       &            0.11 &            0.09 \\
-EUTOCITO\_ANTERIOR             &            0.14 &            0.13 \\
-VENTOSAS\_ANTERIOR             &            0.37 &            0.33 \\
-FORCEPS\_ANTERIOR              &            0.51 &            0.50 \\
-CESARIANAS\_ANTERIOR           &            0.26 &            0.21 \\
-TIPO\_GRAVIDEZ                 &            0.17 &            0.15 \\
-VIGIADA                       &            0.29 &            0.20 \\
-NUMERO\_CONSULTAS\_PRE\_NATAL    &           -3.70 &           -6.67 \\
-VIGIADA\_HOSPITAL              &            0.51 &            0.50 \\
-VIGIADA\_CENTRO\_SAUDE          &            0.50 &            0.49 \\
-VIGIADA\_NESTE\_HOSPITAL        &            0.50 &            0.50 \\
-G\_TERAPEUTICA                 &            0.00 &            0.00 \\
-NUM\_RN                        &            0.45 &            0.35 \\
-BACIA                         &            0.28 &            0.24 \\
-APRESENTACAO\_ADMISSAO         &            0.20 &            0.19 \\
-BISHOP\_SCORE                  &            0.07 &            0.07 \\
-IDADE\_GESTACIONAL\_ADMISSAO    &           -1.20 &           -0.92 \\
-TRAB\_PARTO\_ENTRADA\_ESPONTANEO &            0.50 &            0.50 \\
-TRAB\_PARTO\_ENTRADA\_INDUZIDO   &            0.50 &            0.50 \\
-RPM                           &            0.50 &            0.49 \\
-HIPERTENSAO\_CRONICA           &            0.50 &            0.50 \\
-HIPERTENSAO\_GESTACIONAL       &            0.51 &            0.51 \\
-HIPERTENSAO\_PRE\_ECLAMPSIA     &            0.50 &            0.51 \\
-DIABETES\_GESTACIONAL          &            0.50 &            0.50 \\
-DIABETES\_GESTACIONAL\_DIETA    &            0.50 &            0.50 \\
-DIABETES\_GESTACIONAL\_INSULINA &            0.49 &            0.51 \\
-DIABETES\_GESTACIONAL\_ANTIBIO  &            0.50 &            0.50 \\
-DIABETES\_MATERNA              &            0.50 &            0.51 \\
-DIABETES\_TIPO1                &            0.60 &            0.50 \\
-DIABETES\_TIPO2                &            0.50 &            0.49 \\
-HEMATOLOGICA                  &            0.49 &            0.50 \\
-RESPIRATORIA                  &            0.50 &            0.51 \\
-CEREBRAL                      &            0.50 &            0.50 \\
-CARDIACA                      &            0.49 &            0.49 \\
-TIPO\_PARTO                    &            0.20 &            0.17 \\
-APRESENTACAO\_NO\_PARTO         &            0.31 &            0.25 \\
-TRAB\_PARTO\_NO\_PARTO           &            0.32 &            0.33 \\
-SEMANAS\_GESTACAO\_PARTO        &           -8.10 &          -11.99 \\
-GRUPO\_ROBSON                  &            0.10 &            0.09 \\
-DATA\_PARTO\_mes                &            0.08 &            0.08 \\
-DATA\_PARTO\_ano                &            0.17 &            0.16 \\
-COVID\_19                      &            0.35 &            0.33 \\
-RETESTE\_NEGATIVO              &            0.35 &            0.33 \\
+Age      &           -7.61 &           -7.31 \\
+sex      &            0.45 &            0.55 \\
+cp       &            0.26 &            0.21 \\
+trestbps &          -14.68 &          -13.27 \\
+chol     &          -37.95 &          -38.67 \\
+fbs      &            0.46 &            0.46 \\
+restecg  &            0.48 &            0.36 \\
+thalach  &          -18.27 &          -20.81 \\
+exang    &            0.50 &            0.49 \\
+oldpeak  &           -0.94 &           -0.94 \\
+slope    &            0.36 &            0.32 \\
+ca       &            0.21 &            0.22 \\
+thal     &            0.27 &            0.35 \\
+num      &            0.19 &            0.23 \\
 \end{longtable}
 
 
@@ -639,35 +432,23 @@ For this purpose, we fixed a column for the attacker to known which was the age 
 The remaining fields used were:
 \begin{itemize}
  
-  \item IDADE\_MATERNA
+  \item Age
      
-  \item TIPO\_PARTO
+  \item fbs
      
-  \item GS
+  \item chol
      
-  \item CIGARROS
-     
-  \item ALCOOL
-     
-  \item HIPERTENSAO\_PRE\_ECLAMPSIA
-     
-  \item ESTUPEFACIENTES
-     
-  \item COVID\_19
-     
-  \item PESO\_INICIAL
-     
-  \item IMC
+  \item restecg
      
   \end{itemize}
 \\
-With this, we have a total of 37 equal results between datasets.
+With this, we have a total of 0 equal results between datasets.
 
 \subsection{distance metrics}
 
 For this, we calculated the euclidian distance between records.
 
-For the cosine distance between samples in Real Dataset and synthetic dataset, the value is 0.06614699582880863.
+For the cosine distance between samples in Real Dataset and synthetic dataset, the value is 0.016231998962305136.
 
 
 
