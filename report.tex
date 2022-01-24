@@ -148,8 +148,8 @@ Concerning null/empty cells for each column, the table \ref{tab:nullcomparasion}
     exang &    0 &         0 \\
   oldpeak &    0 &         0 \\
     slope &    0 &         0 \\
-       ca &  4.0 &       5.0 \\
-     thal &  2.0 &         0 \\
+       ca &    0 &         0 \\
+     thal &    0 &         0 \\
       num &    0 &         0 \\
 \end{longtable}
 \\
@@ -280,7 +280,7 @@ This metric uses the chi-squared test to compare the distributions of the two ca
 
 \bottomrule
 \endlastfoot
-ca      &  0.00 \\
+ca      &  1.00 \\
 cp      &  1.00 \\
 exang   &  0.96 \\
 fbs     &  0.92 \\
@@ -304,7 +304,7 @@ The name "Wasserstein distance" was coined by R. L. Dobrushin in 1970, after the
 \begin{longtable}{lrrrr}
 \caption{Distance Metrics results}\label{tab:distance}\\
 \toprule
-{} &     min &  average &    max &    std \\
+{} &    min &  average &    max &    std \\
 \midrule
 \endhead
 \midrule
@@ -314,10 +314,10 @@ The name "Wasserstein distance" was coined by R. L. Dobrushin in 1970, after the
 
 \bottomrule
 \endlastfoot
-KL      & -0.0046 &   0.0040 & 0.0126 & 0.0051 \\
-JSD     &  0.0023 &   0.0289 & 0.0564 & 0.0166 \\
-Wass    &  0.0022 &   0.0201 & 0.0363 & 0.0114 \\
-Entropy &  0.0000 &   0.0043 & 0.0126 & 0.0040 \\
+KL      & 0.0000 &   0.0101 & 0.0535 & 0.0167 \\
+JSD     & 0.0023 &   0.0323 & 0.0564 & 0.0182 \\
+Wass    & 0.0022 &   0.0198 & 0.0363 & 0.0116 \\
+Entropy & 0.0000 &   0.0101 & 0.0535 & 0.0167 \\
 \end{longtable}
 
     
@@ -326,10 +326,10 @@ Entropy &  0.0000 &   0.0043 & 0.0126 & 0.0040 \\
 
 \paragraph{DiscreteKLDivergence}
 
-The value is 0.754.\\
+The value is 0.964.\\
 
 \paragraph{ContinuousKLDivergence}
-The value is 0.701.\\
+The value is 0.679.\\
 
 
 \paragraph{BNLikelihood}
@@ -346,10 +346,15 @@ The value is -7.464182894178309.\\
 \paragraph{GMLogLikelihood}
 
 This metric fits multiple Gaussian Mixture models to the real data and then evaluates the average log likelihood of the synthetic data on them.
-The value is 161.92497904486794.\\
+The value is -56938.28151424706.\\
 
 \paragraph{Coverage Support}
-Association rule mining [1,2] is one of the important data mining tasks that is nowadays applied to solve different kinds of problems in weak formalization fields. The main goal of association rule mining is to find all rules in datasets that satisfy some basic requirements, such as minimum support and minimum confidence. It was initially proposed by Agrawal [3] to solve the market basket problem in transactional datasets and now it has developed to solve many other problems, such as classification, clustering, etc. Classification and prediction are two important tasks of data mining that can be used to extract the hidden regularities from the given datasets to form accurate models (classifiers). Classification approaches aim to build classifiers (models) to predict the class label of a future data object. Such analysis can help to provide us with a better understanding of the data comprehensively. Classification methods have been widely used in many real-world applications, such as customer relationship management [4], medical diagnosis [5] and industrial design [6].
+Association rule mining is one of the important data mining tasks that is nowadays applied to solve different kinds of problems in weak formalization fields. The main goal of association rule mining is to find all rules in datasets that satisfy some basic requirements, such as minimum support and minimum confidence. It was initially proposed by Agrawal [3] to solve the market basket problem in transactional datasets and now it has developed to solve many other problems, such as classification, clustering, etc. Classification and prediction are two important tasks of data mining that can be used to extract the hidden regularities from the given datasets to form accurate models (classifiers). Classification approaches aim to build classifiers (models) to predict the class label of a future data object. Such analysis can help to provide us with a better understanding of the data comprehensively. Classification methods have been widely used in many real-world applications, such as customer relationship management [4], medical diagnosis [5] and industrial design [6].
+
+The value for real on synthetic supporting rules: 0.9558620689655173 \\
+
+The value for synthetic on real supporting rules: 0.9788583509513742 \\
+
 
 \paragraph{Cross-validation}
 For this evaluation, we will make cross-validation with several machine-learning algorithms.
@@ -448,7 +453,7 @@ With this, we have a total of 0 equal results between datasets.
 
 For this, we calculated the euclidian distance between records.
 
-For the cosine distance between samples in Real Dataset and synthetic dataset, the value is 0.016231998962305136.
+For the cosine distance between samples in Real Dataset and synthetic dataset, the value is 0.016277151371331865.
 
 
 
